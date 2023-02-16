@@ -1,0 +1,72 @@
+Pseudocode:
+
+Important Notes:
+- Sales are stored in a txt file
+
+Program must:
+
+Ask "which program would you like to run:"
+(1) Calculate overall revenue, 
+(2) Calculate register balance, or 
+(3) Calculate sales for an item.
+
+If the option is invalid print the following error message and exit the program:
+"This option is not valid."
+
+
+3: 
+Which item to analyze?
+What is the output file?
+Enter A for append or O for over-write.
+
+
+
+coffee_shop.c:
+
+Initialize variables: int operation 
+
+prompt user for options 1, 2, 3
+
+Operation 1: 
+call overall_revenue(FILE *f1)
+return float valuez
+
+Operation 2: 
+call float balance(FILE *f1)
+return float value
+
+Operation 3: 
+call tally(FILE *f1, inyt item)
+Prompt user: 
+Which item to analyze?
+What is the output file?
+Enter A for append or O for over-write.
+If A, then append sales for item 
+If O, then overwrite ouput file withe sales for item
+
+register.c:
+
+float overall_revenue(FILE *f1):
+
+Initialize variables: item code, item price, overall revenue
+While loop that checks if both int and float have been scanned
+If statement that checks if the item number is 0
+Remove the day's starting balance from overall revenue
+Add item price to running sum 
+Return running sum
+
+float balance(FILE *f1):
+
+Initialize variables: item code, item price, balance
+While loop that checks if both int and float have been scanned
+Remove the day's starting balance from overall revenue
+Add item price to running sum 
+Return running sum
+
+int tally(FILE *f1, int item)
+
+Initialize variables: item code, item price, count
+While loop that checks if both int and float have been scanned
+If statement that checks if the item number is the same as the given item number
+If true then increase count by 1
+Return count

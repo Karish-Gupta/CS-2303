@@ -1,0 +1,49 @@
+
+Main(): 
+Initialize year vairable and starting day variable 
+Print prompt to terminal 
+Prompt user for input and retrieves the year
+Calls starting day function and retrives starting day integer
+Calls print calendar and passes the year and starting day 
+return 0
+
+printCalendar(): 
+
+Iterates using a for loop 12 times and calls printMonth()
+Passes i as the month variable
+Returns void
+
+
+printMonth(): 
+
+Initialize variable dayOfWeek
+Print name of the month and year by calling printMonthName
+Print the days of the week with two spaces between each name
+
+Create a for loop that iterates from i = 0 to the dayOfWeek and print 5 spaces
+Create a for loop that iterates from n = starting day to the number
+
+
+printMonthName():
+
+Initialize variable num_day without any value
+
+Create switch statements with 12 different cases (Cases 0 to 11)
+For each case if the given int month matches with the case number, print the relevent month name and the year parameter
+Set num_day equal to the number of days representative of the given month 
+
+Within case 1 for Febuary: If the year is divisible by 4 and the year is not divisble by 100
+or the year is divisible by 100 and 400 
+Then print: 
+Febuary (year)
+This month has 29 days
+else print: 
+Febuary (year)
+This month has 28 days
+
+return variable num_day
+
+
+
+Note that each 
+number uses 5 spaces and that two spaces separate the names of the days from each other. 

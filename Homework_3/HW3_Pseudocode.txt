@@ -1,0 +1,60 @@
+Read sales report for last 6 months:
+
+- Store data in 50 x 7 array of ints 
+	- First column is the item code 
+	- The next 6 columns are data for each month 
+- Create a second 50 x 2 array of floats to store cost and price of each item
+
+
+Function 1: total_sales.txt
+Contains a list of each item and the total number of sales for the item.
+
+- Use Month_data array
+- Must iterate through all 6 months and look for each item individually.
+- Search and count for each item 1 - 50
+- Enter values into separate text file 
+
+For each item 1 - 50 (item code)
+	For each column 1 - 7 (skip first column) 
+		initalize running sum 
+		add item sales for each column 
+	print to Total_sales.txt
+
+
+Function 2: profits.txt
+Contains months_data and money arrays
+
+For each row 
+	
+	For each column 
+	caluclate total sum of sales 
+
+calculate sales, cost, and revenue
+print to profits.txt file with correct formatting 
+
+
+Function 3: top_earner.txt
+Conatins months_data and money array
+
+create 50 by 2 array of item code and item sales sum 
+For each item 1 - 50 (item code)
+	For each column 1 - 7 (skip first column) 
+		initalize running sum 
+		add item sales for each column 
+	place in array 
+
+
+create 50 by 1 array of profits and row is equal to item number
+For 1 - 50 
+	calculate profit using money array 
+	populate profits array
+
+
+For 1 - 10 
+	For rows 1 - 50 of profits array
+		if profits row is < top_earner 
+			top_earner = profits row
+	
+	print to top_earner.txt
+	remove the top_earner from profits array
+	

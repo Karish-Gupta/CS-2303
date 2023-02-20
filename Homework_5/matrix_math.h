@@ -7,6 +7,7 @@ struct matrix
 int size;
 float* data;
 };
+// typedef struct matrix
 typedef struct matrix Matrix;
 
 // function prototypes

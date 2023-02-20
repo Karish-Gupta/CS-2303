@@ -1,11 +1,17 @@
-To run this program, I made use of a makefile. 
-To compile the code enter: mingw32-make
-To run the code enter: ./analysis.exe
+To run this program I used a makefile.
+To compile the code enter: mingw32-make matrixCalc
+To run the code enter: ./matrixCalc.exe input1.txt input2.txt a
 
-This program takes in month data from the command line and a Costs.txt. It then iterates through the month data and inputs this data into a 2-D array called month_data. 
+This program takes three arguments on the command line (4 including the file name. It takes in two file names containing the matrix data values and a character (a or s) for addition or subtraction. 
 
-Function readCosts takes in a number of items and uses the Costs.txt to create a 1D array with all of the items costs. First malloc is used to allocate memory in the heap for the number of items. A while loop contains a fscanf statement which scans for an integer followed by two floats and this continues to loop until the three corresponding values are not found. Within the loop, the cost array is populated with cost values. This array is returned and passed into the previously defined functions from HW3. Function readPurch uses the same exact logic except it populates its array with purchase price values instead of cost values. The readPurch function also returns a 1D array.
+If the proper number of arguments are not present or if the matrices have different sizes, an error message will be prompted to the screen.
 
-The previously made functions (get_totals, get_profits, and top_earner) are relatively the same. Their arguments are different as get_profits and top_earner both take in two 1D arrays in the place of the 2D money array that was previously defined. So, there were a few minor changes made in syntax, but the core logic remained the same as HW3. 
+The readMatrix function takes in the filename and allocates memory for a matrix. Then allocates memory for the data values and scans through the file, populating the data values array. Then the matrix size is set to the count and the matrix data is set to the data values array pointer. A pointer to the matrix is returned.
 
-I did not use any outside resources for this assignment other than going to one office hours session. I attended Professor Mortensen’s office hours and she was able to help me fix some major bugs in my code. The biggest issue I was having was getting the for loop indexing correct. There was a tricky indexing error in readCost and readPurch functions (the count needed to start at 1 and not 0). However, after careful inspection we were able to figure it out.
+The deleteMatrix function takes a pointer to a matrix and frees the data pointer and the matrix structure itself. 
+
+The addition function allocates memory for the new matrix. The size is set to the size of matrix A as both matrix A and B should have the same size. Memory is then allocated for a new data values array pointer. A for loop is used to add each data array value of matrix A with matrix B, which is populated in the new data values array.Matrix D data is set equal to the data values array and the new matrix values are printed to the screen. The same logic is used for the function subtraction, however, the matrix b values are subtracted from matrix A. Both functions return void. 
+
+The main function calls each of the functions. If  “a” is inputted in the command line, addition is called. If “s” is inputted then subtraction is called. If neither a nor s is found an error message is printed and the program ends. If the size of matrix A and B are not the same, then the error message is printed and  the program ends. At the end of the operation, delete matrix is called on both matrix A and B to free the allocated memory.
+
+I did not use any outside resources except the notes from class. I went to one office hours session with Professor Mortensen, as I was having issues with my makefile. The autograder was not able to compile my code as the makefile had some minor bugs. She was able to help me fix the bugs and get my program to work with the autograder. 

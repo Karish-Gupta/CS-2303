@@ -1,6 +1,3 @@
-# all:
-# 	gcc matrix_calc.c matrix_math.c -o matrixCalc.exe
-
 matrixCalc: matrix_calc.o matrix_math.o 
 	gcc -Wall matrix_math.o matrix_calc.o matrix_math.h -lm -o matrixCalc
 

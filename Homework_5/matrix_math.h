@@ -14,8 +14,8 @@ struct matrix* readMatrix(char* filename);
 
 int deleteMatrix(struct matrix *A);
 
-float addition(struct matrix *A, struct matrix *B);
+void addition(struct matrix *A, struct matrix *B);
 
-float subtraction(struct matrix *A, struct matrix *B);
+void subtraction(struct matrix *A, struct matrix *B);
 
 
